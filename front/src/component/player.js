@@ -26,7 +26,7 @@ function Dash() {
 
     const deleteplayer = async (d)=>{
         try{
-            const del = await axios.delete(`/deleteplayer/${d.pid}`)
+            const del = await axios.post(`/deleteplayer/${d.pid}`)
             console.log(d.pid);
             if(del.data === "deleted"){
                 window.location.reload();

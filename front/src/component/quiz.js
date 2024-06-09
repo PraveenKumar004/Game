@@ -69,7 +69,7 @@ const QuizGame = () => {
     const send = () => {
         setview(true);
         sethide(false);
-        axios.put( `/score/${id}`,val)
+        axios.post( `/score/${id}`,val)
     }
 
 

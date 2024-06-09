@@ -26,7 +26,7 @@ function Manage() {
     }
     const deletegame = async ()=>{
         try{
-            const del = await axios.delete(`/delete/${id}`)
+            const del = await axios.post(`/delete/${id}`)
             if(del.data === "deleted"){
                 navigate('/');
             }
